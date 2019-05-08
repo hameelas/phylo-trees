@@ -86,6 +86,6 @@ def get_distances(fname):
     return d
 
 if __name__ == '__main__':
-    fname = 'data.py'
+    fname = 'data.txt'
 
     main(fname)
