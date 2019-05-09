@@ -1,0 +1,82 @@
+\documentclass{article}
+
+
+\usepackage{arxiv}
+\usepackage{amsmath}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage[numbers, sort, comma, square]{natbib}
+
+\title{Neighbor Joining for Hierarchical Clustering of Phylogenetic Trees}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{%
+  Yusuf Alnawakhtha\\
+  Department of Computer Science\\
+  University of Maryland, College Park\\
+  College Park, MD 20740 \\
+  \And
+  Marina Knittel \\
+  Department of Computer Science\\
+  University of Maryland, College Park\\
+  College Park, MD 20740 \\
+  \And
+  Hamed Saleh \\
+  Department of Computer Science\\
+  University of Maryland, College Park\\
+  College Park, MD 20740 \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\DeclareMathOperator{\leaves}{leaves}
+\DeclareMathOperator{\nonleaves}{non-leaves}
+\DeclareMathOperator{\rev}{rev}
+\DeclareMathOperator{\cost}{cost}
+\DeclareMathOperator{\mergecost}{merge-cost}
+\DeclareMathOperator{\mergerev}{merge-rev}
+\DeclareMathOperator{\clustercost}{clustering-cost}
+\DeclareMathOperator{\clusterrev}{clustering-rev}
+
+\begin{document}
+
+
+\maketitle
+
+\input{introduction}
+
+\input{joining}
+
+\input{theory}
+
+\input{conclusion}
+
+\renewcommand\refname{References}
+\nocite{*}
+\bibliography{references}
+
+\bibliographystyle{IEEEtran}
+\end{document}
