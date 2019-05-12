@@ -30,6 +30,6 @@ Now we have all the new distances for the next iteration in the tree and are rea
 
 An interesting property of the tree we construct comes from this notion of keeping the graph additive. In our resulting tree, note that we have each branch distance as represented by the $d$ of adjacent vertices in the corresponding steps of the algorithm. It then holds true, by construction of the tree, that $d(i,j)$ for any species $i$ and $j$ is equal to the path length in the resulting tree. Because of this, if we initially derive our distances based off of some input tree $T$, then neighbor joining will output a tree that agrees with it.
 
-This algorithm is polynomial time, but it is unclear if the runtime can be improved while keeping the same structure. It requires $O(n)$ iterations, and each iteration requries $O(n^2)$ computations to compute $Q$ and recompute distances. Therefore, it runs in $O(n^3)$ time. We are interested in improving this.
+This algorithm is polynomial time, but it is unclear if the runtime can be improved while keeping the same structure. It requires $\mathcal{O}(n)$ iterations, and each iteration requries $\mathcal{O}(n^2)$ computations to compute $Q$ and recompute distances. Therefore, it runs in $\mathcal{O}(n^3)$ time. We are interested in improving this.
 
 

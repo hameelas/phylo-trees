@@ -1,1 +1,8 @@
 \section{Conclusion}
+
+
+We have described in this paper the workings of Saitou and Nei's Neighbor Joining algorithm for constructing phylogenetic trees and our attempt of improving the run time. We provide alongside this paper an implementation of their algorithm in Python, as well as a testing function for the algorithm. 
+
+The testing function works by specifying a number of leaves, assigning a parent to two randomly chosen nodes, assigning the branch weights randomly, and repeating the process until all leaves are connected. Once the tree is generated, we calculate the distance between the leaves by adding the branch weights leading to their most recent common ancestor. This provides us with a distance matrix that can be fed into the Neighbor Joining algorithm and we expect the output of the algorithm to be the randomly generated tree.
+
+It is important to note that while phylogenetic trees provide various applications, they also have their shortcomings. Most notably, they do not always represent evolution and gene mutation accurately. This can be caused by occurrences such as species hybridization, which would cause clustering algorithms to assign different species closer on the phylogenetic tree than they should be. Another clear phenomenon that would cause an inaccurate phylogenetic tree is convergent evolution of different species. Despite this, phylogenetic trees remain a useful visualization of evolutionary history.
