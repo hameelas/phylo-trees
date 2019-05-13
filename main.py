@@ -1,15 +1,11 @@
 import sys
-import test
 import math
 
 print("Hello")
 
 INF = float('Inf')
 
-def main(fname):
-	d = get_distances(fname)
-	n = len(d)
-
+def neighbor_joining(n, d):
 	children = {}
 	for k in range(n-1):
 		m = n - k
@@ -24,7 +20,7 @@ def main(fname):
 			children[n + k] = ((i, 0), (j, d[i][j]))
 
 
-	print(children)
+	return children
 	
 def join(m, d, i, j):   
 	d += [[]]
@@ -85,15 +81,17 @@ def calc_q(m, d):
 	
 	return q, q_dict
 
-def get_distances(fname):
+def read_distances(fname):
 	with open(fname) as f:
 		lines = f.readlines()
 
 		d = [[int(x) for x in line.strip().split()] for line in lines]
 
-	return d
+	return len(d), d
 
 if __name__ == '__main__':
-	fname = sys.argv[1]
+	filename = sys.argv[1] if len(sys.argv) > 1 else 'tmp.txt'
 
-	main(fname)
+	n, d = read_distances(filename)
+	children = neighbor_joining(n, d)
+	print(children)
