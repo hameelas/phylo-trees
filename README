@@ -1,0 +1,14 @@
+An implementation of the Neighbor Joining algorithm.
+
+Instructions:
+- python main.py <filename>:
+	Runs neighbor joining algorithm to find the phylogenetic trees, given distances matrix in file 'filename'.
+
+- python test.py gen <filename> <#leaves> <max_weight>
+	Generates a random binary tree with '#leaves' leaves and edge weights at most 'max_weight', and writes the distances matrix into file 'filename'.
+
+- python test.py check <filename> <#leaves>
+	Checks whether the algorithm works correctly on the input distances matrix in file 'filename'. It creates the tree compares the resulting distances matrix with the original one. It exits with code '0' if and only if the matrices match.
+
+- bash verify.sh
+	Generates a collection of random test cases with different sizes in folder 'tests/', and verifies the correctness of the code on all of them.
