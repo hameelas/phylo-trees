@@ -11,7 +11,9 @@ Neighbor joining is a particular method of hierarchical clustering for phylogent
 
 In neighbor joining, we start at the bottom of this tree and construct one internal node at a time working up the tree. Ideally, we want species that are more similar to be grouped closer in the tree, as in, they diverged more recently in evolutionary history. We do this by creating a sort of proxy for distance and store it in what we call a $Q$ matrix. This matrix represnts the taxa we are currently looking to merge, so if we have $t$ taxa, it will be a $t\times t$ matrix. The $i,j$th entry of $Q$ corresponds to this distance proxy between taxa $i$ and $j$. The proxy is as follows.
 
-\[Q(i,j) = (n-2)d(i,j) -\sum_{k=1}^n d(i,k) - \sum_{k=1}^n d(j,k).\]
+\begin{align}\label{qformula}
+Q(i,j) = (n-2)d(i,j) -\sum_{k=1}^n d(i,k) - \sum_{k=1}^n d(j,k).
+\end{align}
 
 
 Intuitively, this is simply the distance between the two species minus all the distances between one of the species and all others, where the distance between the two species is weighted much larger. Therefore, $Q(i,j)$ is small if $d(i,j)$ is small relative to the average distances between $i$ and all other species, as well as $j$ and all other species. We want this distance to be small, meaning these species are similar relative to other species.
