@@ -16,7 +16,7 @@ Q(i,j) = (n-2)d(i,j) -\sum_{k=1}^n d(i,k) - \sum_{k=1}^n d(j,k).
 \end{align}
 
 
-Intuitively, this is simply the distance between the two species minus all the distances between one of the species and all others, where the distance between the two species is weighted much larger. Therefore, $Q(i,j)$ is small if $d(i,j)$ is small relative to the average distances between $i$ and all other species, as well as $j$ and all other species. We want this distance to be small, meaning these species are similar relative to other species.
+Intuitively, this is simply the distance between the two species minus all the distances between each of the two species and all others, where the distance between the two species is weighted much larger. Therefore, $Q(i,j)$ is small if $d(i,j)$ is small relative to the average distances between $i$ and all other species, as well as $j$ and all other species. We want this distance to be small, meaning these species are similar relative to other species.
 
 In the actual algorithm, we start by calculating our $Q$ matrix across all species. We then find the minimum value in $Q$, say $Q(i,j)$, and then merge species $i$ and $j$. Now we will ignore species $i$ and $j$ because we have found the vertex directly above them in the dendrogram. They are replaced by a single new taxa that represents the cluster of $i$ and $j$ together.
 
