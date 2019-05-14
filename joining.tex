@@ -26,7 +26,9 @@ To calculate the distance between $u$ and both of its children $i$ and $j$, we u
 
 We now need to find the distance between the new taxa and all the other taxa currently in question. Say $i$ and $j$ are the taxa we merged, and $u$ is the new one, and we want to calculate the distance between $u$ and some $k$. Because our graph is additive, we want the sum of the paths from $i$ to $k$ and $j$ to $k$ to be consistent on the graph we are constructing. The first path has length $d(i,k) = d(i,u) + d(u,k)$, and the second has length $d(j,k) = d(j,u) + d(u,k)$. Combining these together, we get the following.
 
-\[d(u,k) = \frac12[d(i,k) + d(j,k) - d(i,j)].\]
+\begin{align}\label{distances}
+d(u,k) = \frac12[d(i,k) + d(j,k) - d(i,j)].
+\end{align}
 
 Now we have all the new distances for the next iteration in the tree and are ready for the next iteration. We continue through this process, keeping track of the vertices we merge until we have constructed our entire tree.
 
